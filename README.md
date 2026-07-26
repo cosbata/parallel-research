@@ -4,56 +4,74 @@
 
 **Live app:** [theparallelresearch.com](https://theparallelresearch.com)
 
-## Why it exists
+## The problem
 
-Research is rarely a single answer. A useful investigation needs competing angles, source material, follow-up questions, and a way to return to the evidence after a summary is written.
+Most AI research ends as a disposable answer in a chat thread. That makes it difficult to compare competing angles, return to a useful source, deepen one part of an investigation, or understand why a final conclusion was written.
 
-Parallel Research makes that workflow explicit:
+Parallel Research treats research as a reusable workspace rather than a one-shot response. It keeps the question, each research path, the material collected, and the final synthesis connected.
+
+## The workflow
 
 ```text
 Question → parallel research lanes → source material → synthesis → follow-up research
 ```
 
+1. Start with one research question.
+2. Split it into independent lanes that explore distinct perspectives.
+3. Read each lane's findings with its collected material.
+4. Select what belongs in a synthesis without overwriting the underlying work.
+5. Deepen a promising lane and attach that work back to its parent.
+
+The useful output is not only a summary. It is a summary that can still be inspected, challenged, and extended.
+
+## Product principles
+
+| Principle | Product consequence |
+| --- | --- |
+| Preserve the research | A synthesis never replaces the underlying lane. |
+| Preserve the evidence path | Findings remain connected to collected source material. |
+| Make branching visible | Parallel and deep research have an explicit parent-child structure. |
+| Put the result first | The interface leads with findings; sources and verification remain available on demand. |
+| Separate a source from a tool | A search provider is execution metadata, not evidence the user can inspect. |
+
 ## What I built
 
-- A research board for exploring a question through several independent lanes
-- Source-aware output that keeps conclusions connected to supporting material
-- Follow-up research without losing the original question or prior work
-- Separate web and API services for the research workspace
+- A research board for exploring one question through several independent lanes
+- Persistent lane state, so each investigation can continue without collapsing into a single chat stream
+- Source-aware research output with material and provenance connected to findings
+- Deep research that remains attached to the lane from which it originated
+- Selective synthesis and verification flows for turning research into defensible writing material
+- A separately deployed Next.js client and FastAPI research service
 
-The product is a research workspace, not a one-shot chat interface: research stays available to inspect, extend, and reuse.
-
-## Architecture
+## Architecture at a glance
 
 ```mermaid
 flowchart LR
-    Q[Research question] --> L[Parallel lanes]
-    L --> S[Source material]
-    S --> Y[Traceable synthesis]
-    Y --> F[Follow-up research]
-    F --> L
+    U[User question] --> W[Next.js workspace]
+    W --> A[FastAPI API]
+    A --> L[Research lane runtime]
+    L --> P[Search and model providers]
+    P --> E[Source material and provenance]
+    E --> D[(Persistent research state)]
+    D --> S[Traceable synthesis]
+    S --> W
 ```
 
-More detail: [research workflow](docs/research-workflow.md).
+- [Product walkthrough](docs/research-workflow.md)
+- [Architecture and reliability](docs/architecture.md)
 
 ## Public portfolio scope
 
 This is the public portfolio repository for Parallel Research. The production application remains private.
 
-Public here:
+| Included here | Kept private |
+| --- | --- |
+| Product workflow, UX rationale, and system architecture | Production source code and deployment configuration |
+| Feature-level implementation decisions | Provider credentials, operational prompts, and environment values |
+| The live product link | User data, research records, and evaluation assets |
 
-- Product workflow and architecture
-- Feature-level implementation approach
-- Sanitized examples and technical decisions
-
-Private by design:
-
-- Production source code and deployment configuration
-- Provider credentials and operational prompts
-- User data, research records, and evaluation assets
-
-No license is included intentionally. The materials are available for review, not for reuse or redistribution.
+No license is included intentionally. These materials are available for review, not for reuse or redistribution.
 
 ## Status
 
-Active prototype. The research workflow and interface are being refined through product use.
+Active prototype. The workflow and interface are refined through product use.
