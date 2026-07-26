@@ -38,6 +38,10 @@ The useful output is not only a summary. It is a summary that can still be inspe
 
 ![Parallel research board with seven connected lanes](assets/research-board.png)
 
+### 3. Review a lane with its context intact
+
+![A research lane examining the consultant's fragmented research stack](assets/research-lane-result.png)
+
 ## Product principles
 
 | Principle | Product consequence |
