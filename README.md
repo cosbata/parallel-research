@@ -4,9 +4,9 @@
 
 **Live app:** [theparallelresearch.com](https://theparallelresearch.com)
 
-![Parallel Research workspace: start a new parallel research session](assets/parallel-research-workspace.png)
+![Start a new parallel research session](assets/research-entry.png)
 
-*A new research workspace. The interface starts with a question, then keeps research lanes, evidence, and follow-up work in one place.*
+*Begin with one question and select the research mode and depth.*
 
 ## The problem
 
@@ -27,6 +27,16 @@ Question → parallel research lanes → source material → synthesis → follo
 5. Deepen a promising lane and attach that work back to its parent.
 
 The useful output is not only a summary. It is a summary that can still be inspected, challenged, and extended.
+
+## Product flow
+
+### 1. Select research candidates
+
+![Candidate research lanes selected from the proposed plan](assets/research-candidates.png)
+
+### 2. Inspect the connected research board
+
+![Parallel research board with seven connected lanes](assets/research-board.png)
 
 ## Product principles
 
