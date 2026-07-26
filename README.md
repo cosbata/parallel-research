@@ -59,6 +59,7 @@ flowchart LR
 
 - [Product walkthrough](docs/research-workflow.md)
 - [Architecture and reliability](docs/architecture.md)
+- [Sanitized implementation examples](examples/README.md)
 
 ## Public portfolio scope
 
