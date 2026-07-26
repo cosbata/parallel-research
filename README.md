@@ -4,6 +4,10 @@
 
 **Live app:** [theparallelresearch.com](https://theparallelresearch.com)
 
+![Parallel Research workspace: start a new parallel research session](assets/parallel-research-workspace.png)
+
+*A new research workspace. The interface starts with a question, then keeps research lanes, evidence, and follow-up work in one place.*
+
 ## The problem
 
 Most AI research ends as a disposable answer in a chat thread. That makes it difficult to compare competing angles, return to a useful source, deepen one part of an investigation, or understand why a final conclusion was written.
