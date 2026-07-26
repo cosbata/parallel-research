@@ -2,6 +2,8 @@
 
 > A research workspace that turns one question into parallel lines of inquiry, then brings the evidence back into a traceable synthesis.
 
+**Live app:** [theparallelresearch.com](https://theparallelresearch.com)
+
 ## Why it exists
 
 Research is rarely a single answer. A useful investigation needs competing angles, source material, follow-up questions, and a way to return to the evidence after a summary is written.
